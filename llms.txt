@@ -1,0 +1,42 @@
+# f2c-cli
+
+> CLI tool to convert Figma designs to React and Vue 3 components using AI.
+
+## What is f2c?
+
+f2c (Figma to Code) is an open-source command-line tool that converts Figma design components into production-ready React or Vue 3 source code using AI (OpenAI GPT-4o or Anthropic Claude).
+
+## Key Features
+
+- Convert any Figma component URL to React TSX or Vue 3 SFC in one command
+- Supports Tailwind CSS, CSS Modules, and plain styles
+- TypeScript output
+- Pro: GitHub Pull Request auto-create
+- Pro: Watch mode — auto re-generate when Figma design changes
+- Works with OpenAI GPT-4o, Claude Sonnet, or local Ollama
+
+## Install
+
+```
+npm install -g f2c-cli
+```
+
+## Usage
+
+```
+f2c init
+f2c convert -u "https://figma.com/design/..." -f react
+f2c license activate F2C-XXXX-XXXX-XXXX-XXXX
+```
+
+## Pricing
+
+- Free: unlimited convert, up to 3 linked components
+- Pro ($19.99 one-time): unlimited links, watch mode, GitHub PR auto-create
+
+## Links
+
+- Homepage: https://tourmaline-ganache-a7fd52.netlify.app/
+- npm: https://www.npmjs.com/package/f2c-cli
+- Buy Pro: https://duziteng.gumroad.com/l/f2c-pro
+- Support: duziteng1987@gmail.com
