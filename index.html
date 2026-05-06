@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>f2c — Figma to Code CLI | Convert Figma to React & Vue 3</title>
-  <meta name="description" content="f2c-cli converts any Figma component to production-ready React or Vue 3 code in one command. AI-powered, Tailwind support, GitHub PR auto-create. Free to start.">
+  <title>f2c — Figma to Code | VSCode Extension & CLI | React & Vue 3</title>
+  <meta name="description" content="f2c converts any Figma component to production-ready React or Vue 3 code — via VSCode extension or CLI. AI-powered, Tailwind support, no Figma plugin needed. Free to start.">
   <meta name="keywords" content="figma to code, figma to react, figma to vue, design to code, figma cli, react component generator, vue component generator, tailwind, AI code generation, frontend tool">
   <meta name="google-site-verification" content="YwKqRB73Lkag_fdodx4ATovZx_yJKrLXbG-FfWeAOhk">
   <link rel="canonical" href="https://tourmaline-ganache-a7fd52.netlify.app/">
@@ -22,14 +22,14 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "f2c-cli",
-    "alternateName": "Figma to Code CLI",
+    "name": "f2c",
+    "alternateName": "Figma to Code",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "macOS, Windows, Linux",
-    "description": "CLI tool to convert Figma designs to production-ready React or Vue 3 components using AI. Supports Tailwind CSS, TypeScript, GitHub PR auto-create.",
+    "description": "Convert Figma designs to production-ready React or Vue 3 components using AI. Available as a VSCode extension and CLI tool. Supports Tailwind CSS, TypeScript, CSS Modules.",
     "url": "https://tourmaline-ganache-a7fd52.netlify.app/",
-    "downloadUrl": "https://www.npmjs.com/package/f2c-cli",
-    "softwareVersion": "0.1.8",
+    "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code",
+    "softwareVersion": "0.1.7",
     "offers": [
       {
         "@type": "Offer",
@@ -40,7 +40,7 @@
       {
         "@type": "Offer",
         "name": "Pro",
-        "price": "19.99",
+        "price": "49.99",
         "priceCurrency": "USD",
         "url": "https://duziteng.gumroad.com/l/f2c-pro"
       }
@@ -224,7 +224,7 @@
 
 <!-- Nav -->
 <nav>
-  <div class="nav-logo">f2c<span>/cli</span></div>
+  <div class="nav-logo">f2c<span>/pro</span></div>
   <div class="nav-links">
     <a href="#quickstart">Quick Start</a>
     <a href="#features">Features</a>
@@ -237,11 +237,11 @@
 
 <!-- Hero -->
 <div class="hero">
-  <div class="hero-badge">Now on npm — f2c-cli</div>
-  <h1>Figma to Code,<br><em>one command.</em></h1>
-  <p class="hero-sub">Convert any Figma component to production-ready React or Vue 3 code instantly. No copy-paste, no manual translation.</p>
+  <div class="hero-badge">VSCode Extension + CLI — f2c</div>
+  <h1>Figma to Code,<br><em>without the grind.</em></h1>
+  <p class="hero-sub">Paste a Figma link, get production-ready React or Vue 3 code. Works inside VSCode or from your terminal. No Figma plugin needed.</p>
   <div class="hero-actions">
-    <a class="btn-primary" href="https://duziteng.gumroad.com/l/f2c-pro" target="_blank">Get Pro — $19.99</a>
+    <a class="btn-primary" href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">Install VSCode Extension →</a>
     <a class="btn-secondary" href="#quickstart">Quick Start ↓</a>
   </div>
 
@@ -271,33 +271,33 @@
 <section id="quickstart">
   <div class="section-inner">
     <div class="section-label">Quick Start</div>
-    <h2>Up and running<br>in 3 minutes.</h2>
-    <p class="section-sub">Install once globally. Set up your tokens once. Convert forever.</p>
+    <h2>Up and running<br>in 2 minutes.</h2>
+    <p class="section-sub">Two ways to use f2c — pick the one that fits your workflow.</p>
 
     <div class="steps">
       <div class="step">
-        <div class="step-num">Step 01</div>
-        <h3>Install</h3>
-        <p>Install f2c globally from npm. Requires Node.js 18+.</p>
-        <div class="step-code">npm install -g f2c-cli</div>
+        <div class="step-num">VSCode — Step 01</div>
+        <h3>Install Extension</h3>
+        <p>Search "f2c" in the VSCode Extensions panel and install <strong>f2c – Figma to Code</strong>. Or click the button below.</p>
+        <div class="step-code"><a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank" style="color:var(--blue);">Install from Marketplace →</a></div>
       </div>
       <div class="step">
-        <div class="step-num">Step 02</div>
+        <div class="step-num">VSCode — Step 02</div>
         <h3>Configure</h3>
-        <p>Run the setup wizard. You'll need a <a href="https://www.figma.com/developers/api#access-tokens" target="_blank" style="color:var(--blue);">Figma access token</a> and an OpenAI / Claude API key.</p>
-        <div class="step-code">f2c init</div>
+        <p>Press <code>Cmd+Shift+P</code> → <strong>f2c: Open Settings</strong>. Fill in your Figma token and OpenAI / Claude API key.</p>
+        <div class="step-code">Cmd+Shift+P → f2c: Open Settings</div>
       </div>
       <div class="step">
-        <div class="step-num">Step 03</div>
+        <div class="step-num">VSCode — Step 03</div>
         <h3>Convert</h3>
-        <p>Copy any Figma node URL and convert it to React or Vue code.</p>
-        <div class="step-code">f2c convert -u "&lt;figma-url&gt;" -f react</div>
+        <p>Right-click any file or folder in the Explorer panel → <strong>f2c: Convert Figma URL to Component</strong>. Paste the Figma link and wait 5–15 seconds.</p>
+        <div class="step-code">Right-click → f2c: Convert Figma URL</div>
       </div>
       <div class="step">
-        <div class="step-num">Step 04</div>
-        <h3>Go Pro (optional)</h3>
-        <p>Buy a license, get your key by email, activate in one command.</p>
-        <div class="step-code">f2c license activate F2C-XXXX-XXXX-XXXX</div>
+        <div class="step-num">CLI — Alternative</div>
+        <h3>Use from Terminal</h3>
+        <p>Prefer the terminal? Install the CLI globally, run <code>f2c init</code> to configure, then convert any Figma node.</p>
+        <div class="step-code">npm install -g f2c-cli</div>
       </div>
     </div>
   </div>
@@ -349,8 +349,8 @@
 <section class="activate-section" id="activate">
   <div class="section-inner">
     <div class="section-label">Pro Activation</div>
-    <h2>Buy once, activate<br>in seconds.</h2>
-    <p class="section-sub">After purchase you'll receive a license key by email. Activation takes one command.</p>
+    <h2>Buy once,<br>activate in seconds.</h2>
+    <p class="section-sub">After purchase you'll receive a license key by email. Activate it in VSCode or the CLI — takes less than a minute.</p>
 
     <div class="activate-grid">
       <!-- Steps -->
@@ -359,7 +359,7 @@
           <div class="activate-step-num">1</div>
           <div class="activate-step-body">
             <h4>Purchase on Gumroad</h4>
-            <p>Click "Get Pro" and complete the checkout. Gumroad accepts all major cards and PayPal.</p>
+            <p>Click "Get Pro" and complete the checkout. One-time payment, no subscription.</p>
           </div>
         </div>
         <div class="activate-step">
@@ -372,21 +372,21 @@
         <div class="activate-step">
           <div class="activate-step-num">3</div>
           <div class="activate-step-body">
-            <h4>Activate with one command</h4>
-            <p>Run the command below in your terminal. That's it — all Pro features are unlocked immediately.</p>
-            <div class="step-code">f2c license activate F2C-XXXX-XXXX-XXXX-XXXX</div>
+            <h4>Activate in VSCode</h4>
+            <p>Press <code>Cmd+Shift+P</code> → <strong>f2c: Activate Pro License</strong> → paste your key. The status bar immediately changes to <code>f2c ⚡ Pro</code>.</p>
+            <div class="step-code">Cmd+Shift+P → f2c: Activate Pro License</div>
           </div>
         </div>
         <div class="activate-step">
           <div class="activate-step-num">4</div>
           <div class="activate-step-body">
-            <h4>Verify anytime</h4>
-            <p>Check your license status or confirm the key is active:</p>
-            <div class="step-code">f2c license status</div>
+            <h4>Or activate via CLI</h4>
+            <p>If you use the CLI, run this command in your terminal instead.</p>
+            <div class="step-code">f2c license activate F2C-XXXX-XXXX-XXXX-XXXX</div>
           </div>
         </div>
         <div class="activate-note">
-          🔑 &nbsp;License is tied to your machine. Moving to a new computer? Just run <code>f2c license activate &lt;key&gt;</code> again on the new machine.
+          🔑 &nbsp;License is tied to one machine at a time. Moving to a new computer? Just activate again on the new machine — the old one will be released automatically.
         </div>
       </div>
 
@@ -455,14 +455,14 @@
       <!-- Pro -->
       <div class="price-card featured">
         <div class="price-tier">Pro</div>
-        <div class="price-amount">$19.99 <span>one-time</span></div>
-        <div class="price-desc">Everything in Free, plus the workflow features.</div>
+        <div class="price-amount">$49.99 <span>one-time</span></div>
+        <div class="price-desc">Everything in Free, plus unlimited conversions and all frameworks.</div>
         <ul class="price-list">
-          <li>Unlimited linked components</li>
-          <li>f2c watch — auto re-generate</li>
-          <li>GitHub PR auto-create</li>
-          <li>f2c sync — push to any branch</li>
+          <li>Unlimited conversions</li>
+          <li>React + Vue 3 + all CSS options</li>
+          <li>Works in VSCode and CLI</li>
           <li>License key delivered by email</li>
+          <li>Activate on any machine</li>
           <li>Priority support</li>
         </ul>
         <a href="https://duziteng.gumroad.com/l/f2c-pro" target="_blank">
@@ -520,18 +520,18 @@
 <!-- Install CTA -->
 <div class="install-strip">
   <h2 style="letter-spacing: -1.6px; margin-bottom: 12px;">Ready to close the<br>design-to-code gap?</h2>
-  <p>Install in 30 seconds. First conversion is free.</p>
-  <div class="install-cmd" onclick="navigator.clipboard.writeText('npm install -g f2c-cli'); this.querySelector('.copy-icon').textContent='✓ copied'">
-    <span style="color:#6e7681;">$</span>
-    <span>npm install -g f2c-cli</span>
-    <span class="copy-icon">⎘ copy</span>
+  <p>Install the VSCode extension. First 3 conversions are free.</p>
+  <div style="display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:32px;">
+    <a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">
+      <button class="btn-install-pro">Install VSCode Extension →</button>
+    </a>
+    <a class="btn-install-npm" href="https://www.npmjs.com/package/f2c-cli" target="_blank">
+      CLI on npm ↗
+    </a>
   </div>
   <div class="install-actions">
     <a href="https://duziteng.gumroad.com/l/f2c-pro" target="_blank">
-      <button class="btn-install-pro">Get Pro — $19.99</button>
-    </a>
-    <a class="btn-install-npm" href="https://www.npmjs.com/package/f2c-cli" target="_blank">
-      View on npm ↗
+      <button class="btn-install-pro" style="background:#4a9eff; color:#fff;">Get Pro — $49.99 one-time →</button>
     </a>
   </div>
 </div>
@@ -541,8 +541,8 @@
   <div class="footer-inner">
     <div class="footer-logo">f2c/cli</div>
     <div class="footer-links">
+      <a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">VSCode</a>
       <a href="https://www.npmjs.com/package/f2c-cli" target="_blank">npm</a>
-      <a href="https://github.com/dujun-bot/f2c-license" target="_blank">GitHub</a>
       <a href="https://duziteng.gumroad.com/l/f2c-pro" target="_blank">Buy Pro</a>
       <a href="mailto:duziteng1987@gmail.com">Support</a>
     </div>
