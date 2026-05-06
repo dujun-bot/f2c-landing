@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>f2c — Figma to Code | VSCode Extension & CLI | React & Vue 3</title>
-  <meta name="description" content="f2c converts any Figma component to production-ready React or Vue 3 code — via VSCode extension or CLI. AI-powered, Tailwind support, no Figma plugin needed. Free to start.">
-  <meta name="keywords" content="figma to code, figma to react, figma to vue, design to code, figma cli, react component generator, vue component generator, tailwind, AI code generation, frontend tool">
+  <title>f2c — Figma to Code | VSCode Extension & CLI</title>
+  <meta name="description" content="f2c converts any Figma component to production-ready React or Vue 3 code. Use it inside VSCode or from your terminal. AI-powered, no Figma plugin needed. Free to start.">
+  <meta name="keywords" content="figma to code, figma to react, figma to vue, vscode extension, figma cli, design to code, tailwind, AI code generation, frontend tool">
   <meta name="google-site-verification" content="YwKqRB73Lkag_fdodx4ATovZx_yJKrLXbG-FfWeAOhk">
   <link rel="canonical" href="https://tourmaline-ganache-a7fd52.netlify.app/">
-  <!-- Open Graph -->
-  <meta property="og:title" content="f2c — Figma to Code CLI">
-  <meta property="og:description" content="Convert any Figma component to production-ready React or Vue 3 code with one command. AI-powered, zero boilerplate.">
+  <meta property="og:title" content="f2c — Figma to Code">
+  <meta property="og:description" content="Convert any Figma component to production-ready React or Vue 3 code. VSCode extension + CLI. One Pro key, both tools.">
   <meta property="og:url" content="https://tourmaline-ganache-a7fd52.netlify.app/">
   <meta property="og:type" content="website">
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="f2c — Figma to Code CLI">
-  <meta name="twitter:description" content="Convert any Figma component to React / Vue 3 with one command. AI-powered CLI tool.">
-  <!-- JSON-LD Structured Data -->
+  <meta name="twitter:title" content="f2c — Figma to Code">
+  <meta name="twitter:description" content="Paste a Figma link, get React or Vue 3 code. VSCode extension + CLI. AI-powered, no plugin needed.">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,70 +23,38 @@
     "alternateName": "Figma to Code",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "macOS, Windows, Linux",
-    "description": "Convert Figma designs to production-ready React or Vue 3 components using AI. Available as a VSCode extension and CLI tool. Supports Tailwind CSS, TypeScript, CSS Modules.",
+    "description": "Convert Figma designs to production-ready React or Vue 3 components using AI. Available as a VSCode extension and CLI tool. Supports Tailwind CSS, TypeScript, CSS Modules. No Figma plugin required.",
     "url": "https://tourmaline-ganache-a7fd52.netlify.app/",
     "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code",
-    "softwareVersion": "0.1.7",
+    "softwareVersion": "0.1.8",
     "offers": [
-      {
-        "@type": "Offer",
-        "name": "Free",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      {
-        "@type": "Offer",
-        "name": "Pro",
-        "price": "29.99",
-        "priceCurrency": "USD",
-        "url": "https://duziteng.gumroad.com/l/f2c-vscode"
-      }
+      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Pro", "price": "29.99", "priceCurrency": "USD", "url": "https://duziteng.gumroad.com/l/f2c-vscode" }
     ],
-    "author": {
-      "@type": "Person",
-      "name": "dujun",
-      "email": "duziteng1987@gmail.com"
-    },
-    "keywords": "figma to code, figma to react, figma to vue, design to code, AI code generation"
+    "author": { "@type": "Person", "name": "dujun", "email": "duziteng1987@gmail.com" }
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --black: #171717;
-      --white: #ffffff;
-      --gray-600: #4d4d4d;
-      --gray-500: #666666;
-      --gray-400: #808080;
-      --gray-100: #ebebeb;
-      --gray-50: #fafafa;
-      --blue: #0068d6;
-      --blue-bg: #ebf5ff;
-      --green: #28c840;
-      --green-dim: #56d364;
+      --black: #171717; --white: #ffffff;
+      --gray-600: #4d4d4d; --gray-500: #666666; --gray-400: #808080;
+      --gray-100: #ebebeb; --gray-50: #fafafa;
+      --blue: #0068d6; --blue-bg: #ebf5ff;
+      --green: #28c840; --green-dim: #56d364;
       --border-shadow: rgba(0,0,0,0.08) 0px 0px 0px 1px;
       --card-shadow: rgba(0,0,0,0.08) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 2px;
       --font: 'Geist', system-ui, -apple-system, sans-serif;
       --mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
     }
-
     html { font-family: var(--font); color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
     body { min-height: 100vh; }
     a { color: inherit; text-decoration: none; }
     code { font-family: var(--mono); font-size: 13px; background: #f5f5f5; padding: 1px 6px; border-radius: 4px; }
 
-    /* ── Nav ── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--gray-100);
-      padding: 0 24px;
-      height: 60px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { font-family: var(--mono); font-size: 16px; font-weight: 500; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px; }
     .nav-logo span { color: var(--gray-400); }
     .nav-links { display: flex; align-items: center; gap: 24px; }
@@ -98,59 +63,81 @@
     .nav-cta { background: var(--black); color: var(--white); font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: opacity 0.15s; }
     .nav-cta:hover { opacity: 0.85; }
 
-    /* ── Hero ── */
+    /* Hero */
     .hero { max-width: 900px; margin: 0 auto; padding: 120px 24px 80px; text-align: center; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--blue-bg); color: var(--blue); font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 9999px; margin-bottom: 32px; }
-    .hero-badge::before { content: "✦"; font-size: 10px; }
+    .hero-badges { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+    .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 9999px; }
+    .badge-blue { background: var(--blue-bg); color: var(--blue); }
+    .badge-dark { background: #f5f5f5; color: var(--gray-600); }
     h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 600; line-height: 1.05; letter-spacing: -2.88px; color: var(--black); margin-bottom: 24px; }
     h1 em { font-style: normal; color: var(--gray-500); }
-    .hero-sub { font-size: clamp(16px, 2vw, 20px); font-weight: 400; line-height: 1.7; color: var(--gray-600); max-width: 560px; margin: 0 auto 40px; }
+    .hero-sub { font-size: clamp(16px, 2vw, 20px); font-weight: 400; line-height: 1.7; color: var(--gray-600); max-width: 560px; margin: 0 auto 16px; }
+    .hero-key-point { font-size: 14px; color: var(--blue); font-weight: 500; margin-bottom: 36px; }
     .hero-actions { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
     .btn-primary { background: var(--black); color: var(--white); font-family: var(--font); font-size: 15px; font-weight: 500; padding: 12px 24px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.15s; cursor: pointer; border: none; }
     .btn-primary:hover { opacity: 0.85; }
     .btn-secondary { background: var(--white); color: var(--black); font-family: var(--font); font-size: 15px; font-weight: 500; padding: 12px 24px; border-radius: 8px; box-shadow: var(--border-shadow); display: inline-flex; align-items: center; gap: 8px; transition: box-shadow 0.15s; cursor: pointer; border: none; }
     .btn-secondary:hover { box-shadow: rgba(0,0,0,0.15) 0px 0px 0px 1px; }
 
-    /* ── Terminal Demo ── */
+    /* Terminal */
     .terminal-wrap { max-width: 700px; margin: 64px auto 0; box-shadow: var(--card-shadow); border-radius: 12px; overflow: hidden; }
     .terminal-bar { background: #1a1a1a; padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
     .dot { width: 12px; height: 12px; border-radius: 50%; }
-    .dot-r { background: #ff5f57; }
-    .dot-y { background: #febc2e; }
-    .dot-g { background: #28c840; }
+    .dot-r { background: #ff5f57; } .dot-y { background: #febc2e; } .dot-g { background: #28c840; }
     .terminal-body { background: #0d0d0d; padding: 24px; font-family: var(--mono); font-size: 14px; line-height: 1.8; color: #d4d4d4; }
-    .t-prompt { color: #4d9375; }
-    .t-cmd { color: #79c0ff; }
-    .t-flag { color: #e3b341; }
-    .t-url { color: #9ecbff; }
-    .t-ok { color: #56d364; }
-    .t-dim { color: #6e7681; }
-    .t-file { color: #ffa657; }
-    .t-key { color: #f78166; }
+    .t-prompt { color: #4d9375; } .t-cmd { color: #79c0ff; } .t-flag { color: #e3b341; }
+    .t-url { color: #9ecbff; } .t-ok { color: #56d364; } .t-dim { color: #6e7681; }
+    .t-file { color: #ffa657; } .t-key { color: #f78166; } .t-comment { color: #6e7681; font-style: italic; }
 
-    /* ── Section ── */
+    /* Sections */
     section { padding: 96px 24px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label { font-family: var(--mono); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-400); margin-bottom: 16px; }
     h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 600; line-height: 1.15; letter-spacing: -1.6px; margin-bottom: 16px; }
-    .section-sub { font-size: 18px; color: var(--gray-600); line-height: 1.65; max-width: 520px; margin-bottom: 56px; }
+    .section-sub { font-size: 18px; color: var(--gray-600); line-height: 1.65; max-width: 560px; margin-bottom: 56px; }
 
-    /* ── Features Grid ── */
+    /* Two-way cards */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+    .product-card { border-radius: 12px; padding: 36px; box-shadow: var(--card-shadow); }
+    .product-card.vscode { background: var(--black); color: var(--white); }
+    .product-card.cli { background: var(--white); }
+    .product-tag { font-family: var(--mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .product-card.vscode .product-tag { color: #808080; }
+    .product-card.cli .product-tag { color: var(--gray-400); }
+    .product-card h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .product-card.cli h3 { color: var(--black); }
+    .product-card p { font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
+    .product-card.vscode p { color: #999; }
+    .product-card.cli p { color: var(--gray-600); }
+    .product-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .product-features li { font-size: 14px; display: flex; align-items: flex-start; gap: 10px; }
+    .product-features li::before { content: "✓"; font-weight: 600; flex-shrink: 0; }
+    .product-card.vscode .product-features li::before { color: var(--green-dim); }
+    .product-card.vscode .product-features li { color: #e5e5e5; }
+    .product-card.cli .product-features li::before { color: var(--green); }
+    .product-card.cli .product-features li { color: var(--gray-600); }
+    .btn-card-white { background: var(--white); color: var(--black); font-family: var(--font); font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 7px; border: none; cursor: pointer; transition: opacity 0.15s; display: inline-block; }
+    .btn-card-white:hover { opacity: 0.9; }
+    .btn-card-outline { background: transparent; color: var(--black); font-family: var(--font); font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 7px; box-shadow: var(--border-shadow); border: none; cursor: pointer; transition: box-shadow 0.15s; display: inline-block; }
+    .btn-card-outline:hover { box-shadow: rgba(0,0,0,0.15) 0px 0px 0px 1px; }
+    .step-code { margin-top: 10px; font-family: var(--mono); font-size: 13px; background: var(--white); padding: 10px 14px; border-radius: 6px; box-shadow: var(--border-shadow); color: var(--black); display: inline-block; }
+
+    /* How it works */
+    .how-section { background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; }
+    .step-num { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--gray-400); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .step h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .step p { font-size: 15px; color: var(--gray-600); line-height: 1.65; }
+
+    /* Features grid */
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--gray-100); border: 1px solid var(--gray-100); border-radius: 12px; overflow: hidden; }
     .feature-card { background: var(--white); padding: 32px; }
     .feature-icon { width: 40px; height: 40px; background: var(--gray-50); border-radius: 8px; box-shadow: var(--border-shadow); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px; }
     .feature-card h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.4px; margin-bottom: 10px; }
     .feature-card p { font-size: 15px; color: var(--gray-600); line-height: 1.65; }
 
-    /* ── How it works ── */
-    .how-section { background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; }
-    .step-num { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--gray-400); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-    .step h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 10px; }
-    .step p { font-size: 15px; color: var(--gray-600); line-height: 1.65; }
-    .step-code { margin-top: 14px; font-family: var(--mono); font-size: 13px; background: var(--white); padding: 10px 14px; border-radius: 6px; box-shadow: var(--border-shadow); color: var(--black); }
-
-    /* ── Activate Section ── */
+    /* Activate */
     .activate-section { border-top: 1px solid var(--gray-100); }
     .activate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
     @media (max-width: 768px) { .activate-grid { grid-template-columns: 1fr; gap: 40px; } }
@@ -159,10 +146,15 @@
     .activate-step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--black); color: var(--white); font-family: var(--mono); font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
     .activate-step-body h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
     .activate-step-body p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
-    .activate-step-body .step-code { margin-top: 10px; font-size: 13px; }
-    .activate-note { margin-top: 24px; padding: 16px; background: var(--blue-bg); border-radius: 8px; font-size: 14px; color: var(--blue); line-height: 1.6; }
+    .activate-note { margin-top: 8px; padding: 16px; background: var(--blue-bg); border-radius: 8px; font-size: 14px; color: var(--blue); line-height: 1.6; }
+    .activate-both { margin-top: 24px; padding: 20px; background: var(--gray-50); border-radius: 10px; box-shadow: var(--border-shadow); }
+    .activate-both h4 { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: var(--black); }
+    .activate-method { margin-bottom: 14px; }
+    .activate-method:last-child { margin-bottom: 0; }
+    .activate-method-label { font-family: var(--mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-400); margin-bottom: 6px; }
+    .activate-method code { font-size: 12px; display: block; background: var(--white); padding: 8px 12px; border-radius: 6px; box-shadow: var(--border-shadow); color: var(--black); }
 
-    /* ── Pricing ── */
+    /* Pricing */
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 760px; }
     .price-card { padding: 32px; border-radius: 12px; box-shadow: var(--card-shadow); }
     .price-card.featured { background: var(--black); color: var(--white); }
@@ -178,37 +170,35 @@
     .price-list li::before { content: "✓"; color: var(--green); font-weight: 600; flex-shrink: 0; }
     .price-card.featured .price-list li::before { color: var(--green-dim); }
     .price-card.featured .price-list li { color: #e5e5e5; }
+    .price-covers { font-family: var(--mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: #808080; margin-bottom: 20px; }
     .btn-price-free { width: 100%; padding: 12px; border-radius: 8px; font-family: var(--font); font-size: 15px; font-weight: 500; box-shadow: var(--border-shadow); background: var(--white); cursor: pointer; border: none; transition: box-shadow 0.15s; }
     .btn-price-free:hover { box-shadow: rgba(0,0,0,0.15) 0px 0px 0px 1px; }
     .btn-price-pro { width: 100%; padding: 12px; border-radius: 8px; font-family: var(--font); font-size: 15px; font-weight: 500; background: var(--white); color: var(--black); cursor: pointer; border: none; transition: opacity 0.15s; }
     .btn-price-pro:hover { opacity: 0.9; }
 
-    /* ── FAQ ── */
+    /* FAQ */
     .faq-section { background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); }
     .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
     .faq-item h4 { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; margin-bottom: 10px; }
     .faq-item p { font-size: 15px; color: var(--gray-600); line-height: 1.7; }
 
-    /* ── Install strip ── */
+    /* CTA strip */
     .install-strip { background: var(--black); color: var(--white); padding: 80px 24px; text-align: center; }
     .install-strip h2 { color: var(--white); margin-bottom: 12px; }
     .install-strip p { color: #808080; font-size: 17px; margin-bottom: 36px; }
-    .install-cmd { display: inline-flex; align-items: center; gap: 12px; background: #1a1a1a; padding: 14px 24px; border-radius: 8px; font-family: var(--mono); font-size: 16px; box-shadow: rgba(255,255,255,0.08) 0px 0px 0px 1px; margin-bottom: 32px; cursor: pointer; }
-    .install-cmd .copy-icon { color: #808080; font-size: 14px; }
     .install-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
     .btn-install-pro { background: var(--white); color: var(--black); font-family: var(--font); font-size: 15px; font-weight: 500; padding: 12px 28px; border-radius: 8px; cursor: pointer; border: none; transition: opacity 0.15s; }
     .btn-install-pro:hover { opacity: 0.9; }
-    .btn-install-npm { color: #808080; font-size: 15px; font-weight: 500; padding: 12px 20px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
-    .btn-install-npm:hover { color: var(--white); }
+    .btn-install-sec { color: #808080; font-size: 15px; font-weight: 500; padding: 12px 20px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
+    .btn-install-sec:hover { color: var(--white); }
 
-    /* ── Footer ── */
+    /* Footer */
     footer { border-top: 1px solid var(--gray-100); padding: 40px 24px; }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .footer-logo { font-family: var(--mono); font-size: 14px; font-weight: 500; color: var(--gray-500); }
     .footer-links { display: flex; gap: 20px; }
     .footer-links a { font-size: 14px; color: var(--gray-500); transition: color 0.15s; }
     .footer-links a:hover { color: var(--black); }
-
     hr { border: none; border-top: 1px solid var(--gray-100); }
 
     @media (max-width: 640px) {
@@ -226,26 +216,30 @@
 <nav>
   <div class="nav-logo">f2c<span>/pro</span></div>
   <div class="nav-links">
-    <a href="#quickstart">Quick Start</a>
+    <a href="#howto">Quick Start</a>
     <a href="#features">Features</a>
     <a href="#activate">Activate</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
   </div>
-  <a class="nav-cta" href="https://duziteng.gumroad.com/l/f2c-vscode" target="_blank">Get Pro →</a>
+  <a class="nav-cta" href="https://duziteng.gumroad.com/l/f2c-vscode" target="_blank">Get Pro — $29.99 →</a>
 </nav>
 
 <!-- Hero -->
 <div class="hero">
-  <div class="hero-badge">VSCode Extension + CLI — f2c</div>
-  <h1>Figma to Code,<br><em>without the grind.</em></h1>
-  <p class="hero-sub">Paste a Figma link, get production-ready React or Vue 3 code. Works inside VSCode or from your terminal. No Figma plugin needed.</p>
+  <div class="hero-badges">
+    <span class="badge badge-blue">VSCode Extension</span>
+    <span class="badge badge-dark">+</span>
+    <span class="badge badge-dark">CLI for terminal</span>
+  </div>
+  <h1>Figma to Code,<br><em>the way you work.</em></h1>
+  <p class="hero-sub">Paste a Figma link, get production-ready React or Vue 3 code. No Figma plugin needed. Works inside VSCode or from your terminal.</p>
+  <p class="hero-key-point">⚡ One Pro license key — activates both the VSCode extension and CLI.</p>
   <div class="hero-actions">
     <a class="btn-primary" href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">Install VSCode Extension →</a>
-    <a class="btn-secondary" href="#quickstart">Quick Start ↓</a>
+    <a class="btn-secondary" href="#howto">See how it works ↓</a>
   </div>
 
-  <!-- Terminal -->
   <div class="terminal-wrap">
     <div class="terminal-bar">
       <div class="dot dot-r"></div>
@@ -253,51 +247,95 @@
       <div class="dot dot-g"></div>
     </div>
     <div class="terminal-body">
-      <div><span class="t-prompt">$</span> <span class="t-cmd">f2c</span> <span class="t-flag">convert</span> <span class="t-url">-u "figma.com/design/…?node-id=137-8958"</span> <span class="t-flag">-f vue</span></div>
-      <div class="t-dim">  ✔ Fetched: Button / Basic</div>
-      <div class="t-dim">  ✔ Cleaned (est. ~207 tokens)</div>
-      <div class="t-dim">  ✔ Code generated</div>
-      <div><span class="t-ok">  ✔ Done!</span></div>
+      <div class="t-dim"># CLI usage</div>
+      <div><span class="t-prompt">$</span> <span class="t-cmd">f2c</span> convert <span class="t-flag">-u</span> <span class="t-url">"figma.com/design/…?node-id=137-8958"</span> <span class="t-flag">-f vue</span></div>
+      <div class="t-dim">  ✔ Fetched: Button / Primary</div>
+      <div class="t-dim">  ✔ AI generating code...</div>
+      <div><span class="t-ok">  ✔ Done → src/components/ButtonPrimary.vue</span></div>
       <div>&nbsp;</div>
-      <div>  Component: <span class="t-file">ButtonBasic</span></div>
-      <div>  File:      <span class="t-file">src/components/ButtonBasic.vue</span></div>
+      <div class="t-dim"># VSCode: right-click any folder → "f2c: Convert Figma URL"</div>
+      <div class="t-dim"># Then paste the same Figma link — same result, inside your editor.</div>
     </div>
   </div>
 </div>
 
 <hr>
 
-<!-- Quick Start -->
-<section id="quickstart">
+<!-- Two ways to use -->
+<section id="products">
+  <div class="section-inner">
+    <div class="section-label">Two ways to use f2c</div>
+    <h2>Pick the one that<br>fits your workflow.</h2>
+    <p class="section-sub">Same core engine, same Pro key. Use the VSCode extension for a visual experience, or the CLI for terminal power.</p>
+
+    <div class="two-col">
+      <!-- VSCode -->
+      <div class="product-card vscode">
+        <div class="product-tag">VSCode Extension — Recommended</div>
+        <h3>f2c – Figma to Code</h3>
+        <p>Integrated directly into VSCode. Right-click any folder, paste a Figma link, get a component file — without leaving your editor.</p>
+        <ul class="product-features">
+          <li>Right-click → Convert in Explorer panel</li>
+          <li>Live preview panel with syntax highlighting</li>
+          <li>Insert / Save / Copy buttons in preview</li>
+          <li>Status bar shows plan &amp; usage (f2c ⚡ Pro)</li>
+          <li>React TSX + Vue 3 SFC output</li>
+          <li>Tailwind / CSS Modules / Plain styles</li>
+        </ul>
+        <a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">
+          <button class="btn-card-white">Install from Marketplace →</button>
+        </a>
+      </div>
+
+      <!-- CLI -->
+      <div class="product-card cli">
+        <div class="product-tag">CLI — For Terminal Users</div>
+        <h3>f2c-cli</h3>
+        <p>Use f2c from any terminal. Works with any editor — Vim, WebStorm, Cursor, or none. Scriptable, CI-friendly, automation-ready.</p>
+        <ul class="product-features">
+          <li><code>f2c convert</code> — convert any Figma node</li>
+          <li><code>f2c watch</code> — auto re-generate on change <em>(Pro)</em></li>
+          <li><code>f2c sync</code> — open GitHub PR automatically <em>(Pro)</em></li>
+          <li><code>f2c link</code> — link a node to a local file <em>(Pro)</em></li>
+          <li>Works in CI/CD pipelines with env vars</li>
+          <li>Supports <code>.f2crc</code> per-project config</li>
+        </ul>
+        <a href="https://www.npmjs.com/package/f2c-cli" target="_blank">
+          <button class="btn-card-outline">View on npm →</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how-section" id="howto">
   <div class="section-inner">
     <div class="section-label">Quick Start</div>
     <h2>Up and running<br>in 2 minutes.</h2>
-    <p class="section-sub">Two ways to use f2c — pick the one that fits your workflow.</p>
+    <p class="section-sub">Choose your path below. Both need a Figma token and an AI API key — set up once, use forever.</p>
 
     <div class="steps">
       <div class="step">
-        <div class="step-num">VSCode — Step 01</div>
+        <div class="step-num">VSCode — Step 1</div>
         <h3>Install Extension</h3>
-        <p>Search "f2c" in the VSCode Extensions panel and install <strong>f2c – Figma to Code</strong>. Or click the button below.</p>
-        <div class="step-code"><a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank" style="color:var(--blue);">Install from Marketplace →</a></div>
+        <p>Search <strong>f2c</strong> in the VSCode Extensions panel, or click "Install from Marketplace" above. Requires VSCode 1.75+.</p>
       </div>
       <div class="step">
-        <div class="step-num">VSCode — Step 02</div>
-        <h3>Configure</h3>
+        <div class="step-num">VSCode — Step 2</div>
+        <h3>Open Settings</h3>
         <p>Press <code>Cmd+Shift+P</code> → <strong>f2c: Open Settings</strong>. Fill in your Figma token and OpenAI / Claude API key.</p>
-        <div class="step-code">Cmd+Shift+P → f2c: Open Settings</div>
       </div>
       <div class="step">
-        <div class="step-num">VSCode — Step 03</div>
-        <h3>Convert</h3>
-        <p>Right-click any file or folder in the Explorer panel → <strong>f2c: Convert Figma URL to Component</strong>. Paste the Figma link and wait 5–15 seconds.</p>
-        <div class="step-code">Right-click → f2c: Convert Figma URL</div>
+        <div class="step-num">VSCode — Step 3</div>
+        <h3>Right-click &amp; Convert</h3>
+        <p>Right-click any folder or file in the Explorer → <strong>f2c: Convert Figma URL to Component</strong>. Paste the link, wait 5–15 s.</p>
       </div>
       <div class="step">
         <div class="step-num">CLI — Alternative</div>
         <h3>Use from Terminal</h3>
-        <p>Prefer the terminal? Install the CLI globally, run <code>f2c init</code> to configure, then convert any Figma node.</p>
-        <div class="step-code">npm install -g f2c-cli</div>
+        <p>Install globally with <code>npm install -g f2c-cli</code>, run <code>f2c init</code> once to configure, then <code>f2c convert -u &lt;url&gt;</code>.</p>
+        <div class="step-code" style="background:var(--gray-50);">npm install -g f2c-cli</div>
       </div>
     </div>
   </div>
@@ -308,38 +346,38 @@
   <div class="section-inner">
     <div class="section-label">Features</div>
     <h2>Everything you need,<br>nothing you don't.</h2>
-    <p class="section-sub">Built for frontend developers who work with Figma every day and are tired of the manual translation gap.</p>
+    <p class="section-sub">AI-driven conversion that understands real Figma structure — not rigid template mapping.</p>
 
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">⚛️</div>
         <h3>React &amp; Vue 3</h3>
-        <p>Outputs idiomatic React TSX or Vue 3 SFC with <code>&lt;script setup lang="ts"&gt;</code>. Picks up your project's conventions.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔗</div>
-        <h3>Link &amp; Watch</h3>
-        <p>Link a Figma node to a local file. Run <code>f2c watch</code> and components re-generate automatically when the design changes.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🚀</div>
-        <h3>GitHub PR Auto-create</h3>
-        <p>Pro mode creates a branch and opens a pull request on your repo automatically. Review, approve, merge — done.</p>
+        <p>Outputs idiomatic React TSX or Vue 3 SFC with <code>&lt;script setup lang="ts"&gt;</code>. TypeScript by default, plain JS optional.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎨</div>
-        <h3>Tailwind / CSS Modules</h3>
-        <p>Choose your CSS strategy: Tailwind utility classes, CSS Modules, or plain inline styles. Each output is clean and production-ready.</p>
+        <h3>Tailwind / CSS Modules / Plain</h3>
+        <p>Choose your CSS strategy. Each output is clean and production-ready — no inline style soup.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🤖</div>
         <h3>AI-powered, not template-based</h3>
-        <p>Reads the actual Figma structure and generates real component logic — not a rigid template mapping. Complex layouts, variants, and states all handled.</p>
+        <p>Reads the actual Figma node tree and generates real component logic. Complex layouts, variants, and states all handled.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔗</div>
+        <h3>Link &amp; Watch (CLI Pro)</h3>
+        <p>Link a Figma node to a local file. Run <code>f2c watch</code> and the component re-generates automatically when the design changes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>GitHub PR Auto-create (CLI Pro)</h3>
+        <p>Run <code>f2c sync</code> and it creates a branch and opens a pull request on your repo automatically.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
-        <h3>Zero config</h3>
-        <p>One install, one command. No webpack plugins, no Figma plugins, no browser extensions. Works anywhere you have Node.js.</p>
+        <h3>Zero plugin, zero config</h3>
+        <p>No Figma plugin to install, no browser extension, no webpack setup. Works anywhere you have Node.js or VSCode.</p>
       </div>
     </div>
   </div>
@@ -349,44 +387,53 @@
 <section class="activate-section" id="activate">
   <div class="section-inner">
     <div class="section-label">Pro Activation</div>
-    <h2>Buy once,<br>activate in seconds.</h2>
-    <p class="section-sub">After purchase you'll receive a license key by email. Activate it in VSCode or the CLI — takes less than a minute.</p>
+    <h2>One key.<br>Both tools unlocked.</h2>
+    <p class="section-sub">Buy once, receive a key by email. The same key activates Pro in both the VSCode extension and the CLI.</p>
 
     <div class="activate-grid">
-      <!-- Steps -->
       <div class="activate-steps">
         <div class="activate-step">
           <div class="activate-step-num">1</div>
           <div class="activate-step-body">
             <h4>Purchase on Gumroad</h4>
-            <p>Click "Get Pro" and complete the checkout. One-time payment, no subscription.</p>
+            <p>Click "Get Pro" and complete the checkout. One-time payment, no subscription, no renewal.</p>
           </div>
         </div>
         <div class="activate-step">
           <div class="activate-step-num">2</div>
           <div class="activate-step-body">
             <h4>Check your email</h4>
-            <p>A license key in the format <code>F2C-XXXX-XXXX-XXXX-XXXX</code> will be sent to your purchase email within a minute.</p>
+            <p>A license key in the format <code>F2C-XXXX-XXXX-XXXX-XXXX</code> is sent automatically within a minute. Check spam if it doesn't appear.</p>
           </div>
         </div>
         <div class="activate-step">
           <div class="activate-step-num">3</div>
           <div class="activate-step-body">
-            <h4>Activate in VSCode</h4>
-            <p>Press <code>Cmd+Shift+P</code> → <strong>f2c: Activate Pro License</strong> → paste your key. The status bar immediately changes to <code>f2c ⚡ Pro</code>.</p>
-            <div class="step-code">Cmd+Shift+P → f2c: Activate Pro License</div>
+            <h4>Activate — your way</h4>
+            <p>Use VSCode or the CLI — both work with the same key.</p>
+            <div class="activate-both">
+              <h4>Choose your activation method:</h4>
+              <div class="activate-method">
+                <div class="activate-method-label">VSCode</div>
+                <code>Cmd+Shift+P → f2c: Activate Pro License → paste key</code>
+              </div>
+              <div class="activate-method">
+                <div class="activate-method-label">CLI</div>
+                <code>f2c license activate F2C-XXXX-XXXX-XXXX-XXXX</code>
+              </div>
+            </div>
           </div>
         </div>
         <div class="activate-step">
           <div class="activate-step-num">4</div>
           <div class="activate-step-body">
-            <h4>Or activate via CLI</h4>
-            <p>If you use the CLI, run this command in your terminal instead.</p>
-            <div class="step-code">f2c license activate F2C-XXXX-XXXX-XXXX-XXXX</div>
+            <h4>Verify anytime</h4>
+            <p>In VSCode: <code>Cmd+Shift+P</code> → <strong>f2c: License Status</strong>. The status bar also shows <code>f2c ⚡ Pro</code> after activation.</p>
+            <p style="margin-top:8px;">In CLI: <code>f2c license status</code></p>
           </div>
         </div>
         <div class="activate-note">
-          🔑 &nbsp;License is tied to one machine at a time. Moving to a new computer? Just activate again on the new machine — the old one will be released automatically.
+          🔑 &nbsp;License is tied to one machine at a time. Moving to a new computer? Activate again — the old machine is released automatically.
         </div>
       </div>
 
@@ -399,27 +446,21 @@
             <div class="dot dot-g"></div>
           </div>
           <div class="terminal-body">
-            <div class="t-dim"># Step 1 — install</div>
-            <div><span class="t-prompt">$</span> <span class="t-cmd">npm</span> install -g f2c-cli</div>
-            <div>&nbsp;</div>
-            <div class="t-dim"># Step 2 — setup wizard</div>
-            <div><span class="t-prompt">$</span> <span class="t-cmd">f2c</span> init</div>
-            <div class="t-dim">  ? Figma access token: ••••••••</div>
-            <div class="t-dim">  ? AI provider: OpenAI</div>
-            <div class="t-dim">  ? OpenAI API key: ••••••••</div>
-            <div><span class="t-ok">  ✔ Config saved to ~/.f2c/config.json</span></div>
-            <div>&nbsp;</div>
-            <div class="t-dim"># Step 3 — activate Pro key</div>
+            <div class="t-dim"># Activate via CLI</div>
             <div><span class="t-prompt">$</span> <span class="t-cmd">f2c</span> license activate <span class="t-key">F2C-A1B2-C3D4-E5F6-G7H8</span></div>
             <div><span class="t-ok">  ✔ License activated!</span></div>
-            <div class="t-dim">  Registered to: you@email.com</div>
-            <div class="t-dim">  All Pro features are now unlocked.</div>
+            <div class="t-dim">  Email: you@email.com</div>
+            <div class="t-dim">  Plan:  Pro — unlimited conversions</div>
             <div>&nbsp;</div>
             <div class="t-dim"># Check status anytime</div>
             <div><span class="t-prompt">$</span> <span class="t-cmd">f2c</span> license status</div>
             <div class="t-dim">  License: <span class="t-ok">Pro ✓</span></div>
-            <div class="t-dim">  Email:   you@email.com</div>
             <div class="t-dim">  Key:     F2C-A1B2-****-****-G7H8</div>
+            <div>&nbsp;</div>
+            <div class="t-dim"># In VSCode: status bar shows</div>
+            <div class="t-dim"># ⚡ f2c Pro  (bottom-right corner)</div>
+            <div>&nbsp;</div>
+            <div class="t-dim"># Same key works in both tools ↑</div>
           </div>
         </div>
       </div>
@@ -431,23 +472,23 @@
 <section id="pricing" style="background:var(--gray-50); border-top:1px solid var(--gray-100);">
   <div class="section-inner">
     <div class="section-label">Pricing</div>
-    <h2>Start free,<br>go pro when you're ready.</h2>
-    <p class="section-sub">One-time payment. No subscriptions, no seats, no surprises.</p>
+    <h2>Start free,<br>go pro when ready.</h2>
+    <p class="section-sub">One-time payment. No subscriptions, no seats, no surprises. Pro covers both VSCode extension and CLI.</p>
 
     <div class="pricing-grid">
       <!-- Free -->
       <div class="price-card">
         <div class="price-tier">Free</div>
         <div class="price-amount">$0 <span>forever</span></div>
-        <div class="price-desc">Try it out with up to 3 components.</div>
+        <div class="price-desc">Get started immediately, no sign-up.</div>
+        <div class="price-covers">Covers: VSCode Extension + CLI</div>
         <ul class="price-list">
-          <li>Up to 3 linked components</li>
-          <li>React &amp; Vue 3 output</li>
-          <li>Tailwind / CSS Modules</li>
-          <li>Local file output</li>
-          <li>f2c convert (unlimited)</li>
+          <li>3 conversions per day</li>
+          <li>React + Tailwind output</li>
+          <li>VSCode preview panel</li>
+          <li>CLI <code>f2c convert</code> command</li>
         </ul>
-        <a href="https://www.npmjs.com/package/f2c-cli" target="_blank">
+        <a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">
           <button class="btn-price-free">Install free →</button>
         </a>
       </div>
@@ -456,17 +497,20 @@
       <div class="price-card featured">
         <div class="price-tier">Pro</div>
         <div class="price-amount">$29.99 <span>one-time</span></div>
-        <div class="price-desc">Everything in Free, plus unlimited conversions and all frameworks.</div>
+        <div class="price-desc">One key, both tools, unlimited forever.</div>
+        <div class="price-covers" style="color:#666;">Covers: VSCode Extension + CLI</div>
         <ul class="price-list">
           <li>Unlimited conversions</li>
           <li>React + Vue 3 + all CSS options</li>
-          <li>Works in VSCode and CLI</li>
+          <li>CLI <code>f2c watch</code> — auto re-generate</li>
+          <li>CLI <code>f2c sync</code> — GitHub PR auto-create</li>
+          <li>CLI <code>f2c link</code> — link node to local file</li>
           <li>License key delivered by email</li>
           <li>Activate on any machine</li>
           <li>Priority support</li>
         </ul>
         <a href="https://duziteng.gumroad.com/l/f2c-vscode" target="_blank">
-          <button class="btn-price-pro">Get Pro →</button>
+          <button class="btn-price-pro">Get Pro — $29.99 →</button>
         </a>
       </div>
     </div>
@@ -478,60 +522,58 @@
   <div class="section-inner">
     <div class="section-label">FAQ</div>
     <h2>Common questions.</h2>
-    <p class="section-sub" style="margin-bottom:48px;">Everything else, email me at <a href="mailto:duziteng1987@gmail.com" style="color:var(--blue);">duziteng1987@gmail.com</a></p>
+    <p class="section-sub" style="margin-bottom:48px;">Anything else? Email <a href="mailto:duziteng1987@gmail.com" style="color:var(--blue);">duziteng1987@gmail.com</a></p>
 
     <div class="faq-grid">
       <div class="faq-item">
+        <h4>Do I need both the VSCode extension and the CLI?</h4>
+        <p>No. Use whichever fits your workflow. Most developers use the VSCode extension. The CLI is for terminal fans, automation, or users who don't use VSCode.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Does one Pro key work for both tools?</h4>
+        <p>Yes. One purchase, one key — activates Pro in both the VSCode extension and the CLI. No separate license needed.</p>
+      </div>
+      <div class="faq-item">
         <h4>What AI provider does f2c use?</h4>
-        <p>f2c supports OpenAI (GPT-4o, GPT-4-turbo) and Anthropic (Claude 3). You supply your own API key — f2c never stores it. Run <code>f2c init</code> to configure.</p>
+        <p>f2c supports OpenAI (GPT-4o) and Anthropic (Claude). You supply your own API key — f2c never stores it on our servers.</p>
       </div>
       <div class="faq-item">
         <h4>Where do I get a Figma access token?</h4>
-        <p>Open Figma → Settings → Security → Personal access tokens → Generate new token. Paste it when you run <code>f2c init</code>. Read-only access is enough.</p>
+        <p>Figma → Settings → Security → Personal access tokens → Generate new token. Read-only access is enough. Paste it into f2c settings.</p>
       </div>
       <div class="faq-item">
         <h4>How quickly does the license key arrive?</h4>
-        <p>Usually within 1 minute of purchase. It's sent automatically to the email you use at checkout. Check your spam folder if it doesn't appear.</p>
+        <p>Usually within 1 minute of purchase — sent automatically to your checkout email. Check spam if it doesn't appear. Still missing? Email with your order number.</p>
       </div>
       <div class="faq-item">
-        <h4>Can I use the key on multiple machines?</h4>
-        <p>Yes. Run <code>f2c license activate &lt;key&gt;</code> on each machine you use. The license is not locked to a single device.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What if I don't receive my key?</h4>
-        <p>Email <a href="mailto:duziteng1987@gmail.com" style="color:var(--blue);">duziteng1987@gmail.com</a> with your Gumroad order number and I'll send the key manually, usually within a few hours.</p>
+        <h4>Can I activate on multiple machines?</h4>
+        <p>Yes. Activate on any machine you use. The key is tied to one machine at a time — activating on a new machine releases the old one automatically.</p>
       </div>
       <div class="faq-item">
         <h4>Is there a refund policy?</h4>
-        <p>Yes — 7-day no-questions-asked refund. Just email with your order number. Refunds are processed through Gumroad and the key will be deactivated.</p>
+        <p>Yes — 7-day no-questions-asked refund. Email with your Gumroad order number. Refund processed through Gumroad, key deactivated.</p>
       </div>
       <div class="faq-item">
-        <h4>Does f2c work offline?</h4>
-        <p>The <code>f2c convert</code> command requires internet access (Figma API + AI). The license is cached locally for 7 days, so Pro features work offline after first activation.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What Node.js version is required?</h4>
-        <p>Node.js 18 or higher. Run <code>node -v</code> to check. Most systems already meet this requirement.</p>
+        <h4>What Node.js version is required for the CLI?</h4>
+        <p>Node.js 18 or higher. Run <code>node -v</code> to check. The VSCode extension has no Node.js version requirement.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Install CTA -->
+<!-- CTA strip -->
 <div class="install-strip">
-  <h2 style="letter-spacing: -1.6px; margin-bottom: 12px;">Ready to close the<br>design-to-code gap?</h2>
-  <p>Install the VSCode extension. First 3 conversions are free.</p>
-  <div style="display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:32px;">
+  <h2 style="letter-spacing: -1.6px; margin-bottom: 12px;">Stop translating Figma by hand.</h2>
+  <p>Install in 30 seconds. First 3 conversions are free.</p>
+  <div class="install-actions">
     <a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">
       <button class="btn-install-pro">Install VSCode Extension →</button>
     </a>
-    <a class="btn-install-npm" href="https://www.npmjs.com/package/f2c-cli" target="_blank">
-      CLI on npm ↗
+    <a href="https://duziteng.gumroad.com/l/f2c-vscode" target="_blank" class="btn-install-sec">
+      Get Pro — $29.99 one-time →
     </a>
-  </div>
-  <div class="install-actions">
-    <a href="https://duziteng.gumroad.com/l/f2c-vscode" target="_blank">
-      <button class="btn-install-pro" style="background:#4a9eff; color:#fff;">Get Pro — $29.99 one-time →</button>
+    <a class="btn-install-sec" href="https://www.npmjs.com/package/f2c-cli" target="_blank">
+      CLI on npm ↗
     </a>
   </div>
 </div>
@@ -539,10 +581,10 @@
 <!-- Footer -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">f2c/cli</div>
+    <div class="footer-logo">f2c — Figma to Code</div>
     <div class="footer-links">
       <a href="https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code" target="_blank">VSCode</a>
-      <a href="https://www.npmjs.com/package/f2c-cli" target="_blank">npm</a>
+      <a href="https://www.npmjs.com/package/f2c-cli" target="_blank">CLI (npm)</a>
       <a href="https://duziteng.gumroad.com/l/f2c-vscode" target="_blank">Buy Pro</a>
       <a href="mailto:duziteng1987@gmail.com">Support</a>
     </div>
