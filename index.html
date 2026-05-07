@@ -26,7 +26,7 @@
     "description": "Convert Figma designs to production-ready React or Vue 3 components using AI. Available as a VSCode extension and CLI tool. Supports Tailwind CSS, TypeScript, CSS Modules. No Figma plugin required.",
     "url": "https://tourmaline-ganache-a7fd52.netlify.app/",
     "downloadUrl": "https://marketplace.visualstudio.com/items?itemName=dujun-bot.f2c-figma-to-code",
-    "softwareVersion": "0.1.8",
+    "softwareVersion": "0.2.2",
     "offers": [
       { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
       { "@type": "Offer", "name": "Pro", "price": "29.99", "priceCurrency": "USD", "url": "https://duziteng.gumroad.com/l/f2c-vscode" }
@@ -275,6 +275,8 @@
         <h3>f2c – Figma to Code</h3>
         <p>Integrated directly into VSCode. Right-click any folder, paste a Figma link, get a component file — without leaving your editor.</p>
         <ul class="product-features">
+          <li>Figma Layers panel — browse &amp; click to convert</li>
+          <li>Unlimited depth: expand any frame / group / component</li>
           <li>Right-click → Convert in Explorer panel</li>
           <li>Live preview panel with syntax highlighting</li>
           <li>Insert / Save / Copy buttons in preview</li>
@@ -328,8 +330,13 @@
       </div>
       <div class="step">
         <div class="step-num">VSCode — Step 3</div>
-        <h3>Right-click &amp; Convert</h3>
-        <p>Right-click any folder or file in the Explorer → <strong>f2c: Convert Figma URL to Component</strong>. Paste the link, wait 5–15 s.</p>
+        <h3>Browse Layers &amp; Convert</h3>
+        <p>Open the <strong>FIGMA LAYERS</strong> panel in the Explorer sidebar. Click <strong>↓ Load Figma File</strong>, paste the file URL. The full layer tree appears — click any node to convert it instantly. Progress appears immediately.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">VSCode — Step 3 (alt)</div>
+        <h3>Or: Right-click &amp; Paste URL</h3>
+        <p>Right-click any folder or file in the Explorer → <strong>f2c: Convert Figma URL to Component</strong>. Paste the node link, wait 5–15 s.</p>
       </div>
       <div class="step">
         <div class="step-num">CLI — Alternative</div>
@@ -349,6 +356,11 @@
     <p class="section-sub">AI-driven conversion that understands real Figma structure — not rigid template mapping.</p>
 
     <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🗂️</div>
+        <h3>Figma Layers Panel</h3>
+        <p>Browse your entire Figma file like a file explorer — unlimited depth. Pages, frames, groups, components. Click any node to convert it instantly. No URL copying needed.</p>
+      </div>
       <div class="feature-card">
         <div class="feature-icon">⚛️</div>
         <h3>React &amp; Vue 3</h3>
